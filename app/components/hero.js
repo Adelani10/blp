@@ -37,7 +37,7 @@ export default function Hero() {
         </button>
       </nav>
 
-      <section className="flex sm:space-x-6  flex-col sm:flex-row">
+      <section className="flex sm:space-x-6 sm:justify-between  flex-col sm:flex-row">
         <article className="flex flex-col sm:space-y-3 space-y-4 sm:max-w-[50%]">
           <h1 className="capitalize text-2xl font-semibold text-center sm:text-left text-veryDarkBlue">
             a simple bookmark manager
@@ -59,8 +59,8 @@ export default function Hero() {
           </div>
         </article>
 
-        <div className="order-first sm:order-last">
-          <img src="/illustration-hero.svg" alt="" />
+        <div className="order-first sm:order-last sm:w-[400px] border">
+          <img src="/illustration-hero.svg" className="w-full " alt="" />
         </div>
       </section>
     </div>
