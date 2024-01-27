@@ -42,7 +42,7 @@ export default function Hero() {
           <h1 className="capitalize text-2xl font-semibold text-center sm:text-left text-veryDarkBlue">
             a simple bookmark manager
           </h1>
-          <p className="text-grayishBlue sm:text-lg text-center sm:text-left max-w-[78%] sm:max-w-full mx-auto tracking-wide sm:tracking-wide">
+          <p className="text-grayishBlue sm:text-lg text-center sm:text-left sm:max-w-full mx-auto tracking-wide sm:tracking-wide">
             A clean and simple interface to organize your favorite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.

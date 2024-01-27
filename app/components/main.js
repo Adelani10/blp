@@ -35,7 +35,7 @@ export default function Main() {
           <h1 className="text-2xl font-semibold text-center sm:text-left text-veryDarkBlue">
             Bookmark in one click
           </h1>
-          <p className="text-grayishBlue text-center sm:text-left max-w-[78%] sm:max-w-full mx-auto  sm:tracking-wide">
+          <p className="text-grayishBlue text-center sm:text-left mx-auto sm:mx-0 sm:tracking-wide">
             Organize your bookmarks however you like. Our simple drag-and-drop
             interface gives you complete control over how you manage your
             favorite sites.
@@ -47,16 +47,18 @@ export default function Main() {
         </article>
       </div>
 
-      <div className="">
-        <h3 className=" text-2xl text-veryDarkBlue font-semibold space-y-3 text-center">
+      <div className="space-y-2">
+        <h3 className=" text-2xl text-veryDarkBlue font-semibold text-center">
           Download the extention
         </h3>
-        <p className="text-grayishBlue sm:text-lg text-center sm:tracking-wide max-w-[78%] mx-auto pb-6">
+        <p className="text-grayishBlue sm:text-lg text-center sm:tracking-wide lg:max-w-[60%] mx-auto pb-6">
           We've got more browsers in the pipeline. Please do let us know if
           you've got a favorite you'd like us to prioritize
         </p>
 
-        <div className="flex flex-col items-center justify-center sm:flex-row border-t"></div>
+        <div className="flex flex-col items-center justify-center sm:flex-row border-t">
+
+        </div>
       </div>
     </section>
   );
