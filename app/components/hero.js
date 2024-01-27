@@ -38,11 +38,11 @@ export default function Hero() {
       </nav>
 
       <section className="flex sm:space-x-6 sm:justify-between  flex-col sm:flex-row">
-        <article className="flex flex-col sm:space-y-3 space-y-4 sm:max-w-[50%]">
+        <article className="flex flex-col sm:space-y-3 space-y-2 sm:max-w-[50%]">
           <h1 className="capitalize text-2xl font-semibold text-center sm:text-left text-veryDarkBlue">
             a simple bookmark manager
           </h1>
-          <p className="text-grayishBlue text-xs sm:text-lg text-center sm:text-left max-w-[78%] sm:max-w-full mx-auto tracking-widest sm:tracking-wide">
+          <p className="text-grayishBlue sm:text-lg text-center sm:text-left max-w-[78%] sm:max-w-full mx-auto tracking-wide sm:tracking-wide">
             A clean and simple interface to organize your favorite websites.
             Open a new browser tab and see your sites load instantly. Try it for
             free.
