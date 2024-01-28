@@ -53,7 +53,7 @@ export default function Main() {
         </h3>
         <p className="text-grayishBlue sm:text-lg text-center sm:tracking-wide lg:max-w-[60%] mx-auto pb-6">
           We've got more browsers in the pipeline. Please do let us know if
-          you've got a favorite you'd like us to prioritize
+          you've got a favorite you'd like us to prioritize.
         </p>
 
         <div className="flex flex-col items-center justify-center sm:flex-row border-t">
