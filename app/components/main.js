@@ -10,7 +10,6 @@ export default function Main() {
       version: 62,
       margin1: false,
       margin2: false,
-      marginValue: 0
     },
     {
       img: "/logo-firefox.svg",
@@ -18,7 +17,6 @@ export default function Main() {
       version: 55,
       margin1: true,
       margin2: false,
-      marginValue: 12
     },
     {
       img: "/logo-opera.svg",
@@ -26,10 +24,8 @@ export default function Main() {
       version: 46,
       margin1: true,
       margin2: true,
-      marginValue: 24
     },
   ]);
-
 
   return (
     <section className="text-black space-y-10">
@@ -88,8 +84,17 @@ export default function Main() {
 
         <div className="flex flex-col items-center justify-center sm:flex-row gap-y-6 sm:gap-y-0 sm:gap-x-4 ">
           {browser.map((item, index) => {
-            return(
-              <div key={index} className={`flex flex-col shadow p-5 ${item.margin1 && item.margin2 ? "sm:mt-24" : item.margin1 ? "sm:mt-12" : "sm:mt-0"} sm:max-w-[33.3%] max-w-[80%] gap-y-8`}>
+            return (
+              <div
+                key={index}
+                className={`flex flex-col shadow p-5 ${
+                  item.margin1 && item.margin2
+                    ? "sm:mt-24"
+                    : item.margin1
+                    ? "sm:mt-12"
+                    : "sm:mt-0"
+                } sm:max-w-[33.3%] max-w-[80%] gap-y-8`}
+              >
                 <div className="flex flex-col items-center space-y-6">
                   <img src={item.img} alt="" className="w-24" />
                   <div className="space-y-1">
