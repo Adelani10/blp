@@ -1,12 +1,42 @@
 "use client";
 import Link from "next/link";
-// import { useState } from "react";
+import { useState } from "react";
 
 export default function Main() {
+  const [browser, setBrowser] = useState([
+    {
+      img: "/logo-chrome.svg",
+      text: "Chrome",
+      version: 62,
+      margin1: false,
+      margin2: false,
+      marginValue: 0
+    },
+    {
+      img: "/logo-firefox.svg",
+      text: "Firefox",
+      version: 55,
+      margin1: true,
+      margin2: false,
+      marginValue: 12
+    },
+    {
+      img: "/logo-opera.svg",
+      text: "Opera",
+      version: 46,
+      margin1: true,
+      margin2: true,
+      marginValue: 24
+    },
+  ]);
+
+
   return (
     <section className="text-black space-y-10">
       <div className="space-y-2">
-        <h3 className="capitalize text-2xl font-semibold text-center text-veryDarkBlue">features</h3>
+        <h3 className="capitalize text-2xl font-semibold text-center text-veryDarkBlue">
+          features
+        </h3>
         <p className="text-grayishBlue lg:max-w-[60%] mx-auto sm:text-lg text-center sm:tracking-wide">
           Our aim is to make it quick and easy for you to access your favorite
           websites. Your bookmarks sync between your devices so you can access
@@ -56,8 +86,31 @@ export default function Main() {
           you've got a favorite you'd like us to prioritize.
         </p>
 
-        <div className="flex flex-col items-center justify-center sm:flex-row border-t">
+        <div className="flex flex-col items-center justify-center sm:flex-row gap-y-6 sm:gap-y-0 sm:gap-x-4 ">
+          {browser.map((item, index) => {
+            return(
+              <div key={index} className={`flex flex-col shadow p-5 ${item.margin1 && item.margin2 ? "sm:mt-24" : item.margin1 ? "sm:mt-12" : "sm:mt-0"} sm:max-w-[33.3%] max-w-[80%] gap-y-8`}>
+                <div className="flex flex-col items-center space-y-6">
+                  <img src={item.img} alt="" className="w-24" />
+                  <div className="space-y-1">
+                    <h4 className="font-semibold text-veryDarkBlue">
+                      Add to {item.text}
+                    </h4>
+                    <p className="text-xs text-grayishBlue">
+                      Minimum version {item.version}
+                    </p>
+                  </div>
+                </div>
 
+                <div className="flex flex-col items-center gap-y-5">
+                  <img src="/bg-dots.svg" alt="" className="w-full" />
+                  <button className="border bg-softBlue text-white capitalize hover:text-softBlue border-softBlue hover:bg-white p-2 text-sm  rounded-md">
+                    add & install extension
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
