@@ -1,6 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+
+{/* <IoMdArrowDropup /> */}
 
 export default function Main() {
   const [browser, setBrowser] = useState([
@@ -24,6 +27,32 @@ export default function Main() {
       version: 46,
       margin1: true,
       margin2: true,
+    },
+  ]);
+  const [faq, setFaq] = useState([
+    {
+      id: "1",
+      question: "What is Bookmark",
+      answer:
+        "sdgfyuef daiguhsa dwcguioiq  cuhas hce n xhowqu cqipj icjpie jebapowd0 cqeilhiih gsd uhqohucp jbiph JCEBIP EIEHII jei jfhipe ioqpj jwdcipjo ygqi hijwd",
+    },
+    {
+      id: "2",
+      question: "How can i request a new browser?",
+      answer:
+        "sdgfyuef daiguhsa dwcguioiq  cuhas hce n xhowqu cqipj icjpie jebapowd0 cqeilhiih gsd uhqohucp jbiph JCEBIP EIEHII jei jfhipe ioqpj jwdcipjo ygqi hijwd",
+    },
+    {
+      id: "3",
+      question: "Is there a mobile app?",
+      answer:
+        "sdgfyuef daiguhsa dwcguioiq  cuhas hce n xhowqu cqipj icjpie jebapowd0 cqeilhiih gsd uhqohucp jbiph JCEBIP EIEHII jei jfhipe ioqpj jwdcipjo ygqi hijwd",
+    },
+    {
+      id: "4",
+      question: "What about other Chromium browsers",
+      answer:
+        "sdgfyuef daiguhsa dwcguioiq  cuhas hce n xhowqu cqipj icjpie jebapowd0 cqeilhiih gsd uhqohucp jbiph JCEBIP EIEHII jei jfhipe ioqpj jwdcipjo ygqi hijwd",
     },
   ]);
 
@@ -116,6 +145,26 @@ export default function Main() {
               </div>
             );
           })}
+        </div>
+      </div>
+
+      <div className="space-y-2 max-w-[60%] mx-auto">
+        <h3 className=" text-2xl text-veryDarkBlue font-semibold text-center">
+          Frequently asked questions
+        </h3>
+        <p className="text-grayishBlue sm:text-lg text-center sm:tracking-wide lg:max-w-[60%] mx-auto pb-6">
+          Here are some of our FAQs. If you have any other questions you'd like
+          answered please feel free to email us.
+        </p>
+
+        <div className="flex flex-col border-t">
+            <div className="">
+
+            </div>
+            <button className="w-full p-2 flex  border-b items-center justify-between">
+                <h4>What is bookmark</h4>
+                <IoMdArrowDropdown className="text-2xl" />
+            </button>
         </div>
       </div>
     </section>
