@@ -159,13 +159,21 @@ export default function Main() {
         </p>
 
         <div className="flex flex-col border-t">
-          <div className="w-full p-2 py-3  border-b space-y-3">
-            <button className=" flex w-full text-veryDarkBlue items-center justify-between">
-              <h4 className="text-veryDarkBlue text-xl">What is bookmark</h4>
-              <IoMdArrowDropdown className="text-2xl" />
-            </button>
-            <p className="text-sm hidden text-grayishBlue">sdgfyuef daiguhsa dwcguioiq  cuhas hce n xhowqu cqipj icjpie jebapowd0 cqeilhiih gsd uhqohucp jbiph JCEBIP EIEHII jei jfhipe ioqpj jwdcipjo ygqi hijwd</p>
-          </div>
+          {faq.map((item, index) => {
+            return (
+              <div key={index} className="w-full p-2 py-3  border-b space-y-3">
+                <button className=" flex w-full text-veryDarkBlue items-center justify-between">
+                  <h4 className="text-veryDarkBlue text-xl">
+                    {item.question}
+                  </h4>
+                  <IoMdArrowDropdown className="text-2xl" />
+                </button>
+                <p className="text-sm hidden text-grayishBlue">
+                  {item.answer}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
