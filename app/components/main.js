@@ -164,13 +164,7 @@ export default function Main() {
             return (
               <div
                 key={index}
-                onClick={(e) => {
-                    if(e.target.id === item.id) {
-                        return {
-                            ...item, showAnswer: true
-                        }
-                    }
-                }}
+                // onClick={}
                 id={item.id}
                 className="w-full p-2 py-3 cursor-pointer border-b space-y-3"
               >
