@@ -2,10 +2,6 @@
 import { useState } from "react";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 
-{
-  /* <IoMdArrowDropup /> */
-}
-
 export default function Main() {
   const [browser, setBrowser] = useState([
     {
@@ -36,26 +32,31 @@ export default function Main() {
       question: "What is Bookmark",
       answer:
         "sdgfyuef daiguhsa dwcguioiq  cuhas hce n xhowqu cqipj icjpie jebapowd0 cqeilhiih gsd uhqohucp jbiph JCEBIP EIEHII jei jfhipe ioqpj jwdcipjo ygqi hijwd",
+      showAnswer: false,
     },
     {
       id: "2",
       question: "How can i request a new browser?",
       answer:
         "sdgfyuef daiguhsa dwcguioiq  cuhas hce n xhowqu cqipj icjpie jebapowd0 cqeilhiih gsd uhqohucp jbiph JCEBIP EIEHII jei jfhipe ioqpj jwdcipjo ygqi hijwd",
+      showAnswer: false,
     },
     {
       id: "3",
       question: "Is there a mobile app?",
       answer:
         "sdgfyuef daiguhsa dwcguioiq  cuhas hce n xhowqu cqipj icjpie jebapowd0 cqeilhiih gsd uhqohucp jbiph JCEBIP EIEHII jei jfhipe ioqpj jwdcipjo ygqi hijwd",
+      showAnswer: false,
     },
     {
       id: "4",
-      question: "What about other Chromium browsers",
+      question: "What about other chromium browsers?",
       answer:
         "sdgfyuef daiguhsa dwcguioiq  cuhas hce n xhowqu cqipj icjpie jebapowd0 cqeilhiih gsd uhqohucp jbiph JCEBIP EIEHII jei jfhipe ioqpj jwdcipjo ygqi hijwd",
+      showAnswer: false,
     },
   ]);
+  const [openDropdown, setOpenDropdown] = useState(false);
 
   return (
     <section className="text-black space-y-10">
@@ -149,7 +150,7 @@ export default function Main() {
         </div>
       </div>
 
-      <div className="space-y-2 max-w-[60%] mx-auto">
+      <div className="space-y-2 sm:max-w-[60%] w-full mx-auto">
         <h3 className=" text-2xl text-veryDarkBlue font-semibold text-center">
           Frequently asked questions
         </h3>
@@ -161,16 +162,29 @@ export default function Main() {
         <div className="flex flex-col border-t">
           {faq.map((item, index) => {
             return (
-              <div key={index} className="w-full p-2 py-3  border-b space-y-3">
+              <div
+                key={index}
+                onClick={(e) => {
+                    if(e.target.id === item.id) {
+                        return {
+                            ...item, showAnswer: true
+                        }
+                    }
+                }}
+                id={item.id}
+                className="w-full p-2 py-3 cursor-pointer border-b space-y-3"
+              >
                 <button className=" flex w-full text-veryDarkBlue items-center justify-between">
-                  <h4 className="text-veryDarkBlue text-xl">
-                    {item.question}
-                  </h4>
-                  <IoMdArrowDropdown className="text-2xl" />
+                  <h4 className="text-veryDarkBlue text-xl">{item.question}</h4>
+                  {item.showAnswer ? (
+                    <IoMdArrowDropup className="text-2xl" />
+                  ) : (
+                    <IoMdArrowDropdown className="text-2xl" />
+                  )}
                 </button>
-                <p className="text-sm hidden text-grayishBlue">
-                  {item.answer}
-                </p>
+                {item.showAnswer && (
+                  <p className="text-sm text-grayishBlue">{item.answer}</p>
+                )}
               </div>
             );
           })}
