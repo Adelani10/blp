@@ -187,6 +187,10 @@ export default function Main() {
           more info
         </button>
       </div>
+
+      <div className="bg-softBlue flex flex-col">
+
+      </div>
     </section>
   );
 }
