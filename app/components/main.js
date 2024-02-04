@@ -150,7 +150,7 @@ export default function Main() {
         </div>
       </div>
 
-      <div className="space-y-2 sm:max-w-[60%] w-full mx-auto">
+      <div className="space-y-2 sm:max-w-[60%] w-full mx-auto flex flex-col">
         <h3 className=" text-2xl text-veryDarkBlue font-semibold text-center">
           Frequently asked questions
         </h3>
@@ -159,7 +159,7 @@ export default function Main() {
           answered please feel free to email us.
         </p>
 
-        <div className="flex flex-col border-t">
+        <div className="flex flex-col border-t pb-6">
           {faq.map((item, index) => {
             return (
               <div
@@ -183,6 +183,9 @@ export default function Main() {
             );
           })}
         </div>
+        <button className="border  hover:bg-softBlue self-center hover:text-white capitalize border-softBlue p-2 px-3 rounded-md">
+          more info
+        </button>
       </div>
     </section>
   );
