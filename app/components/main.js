@@ -56,7 +56,6 @@ export default function Main() {
       showAnswer: false,
     },
   ]);
-  const [openDropdown, setOpenDropdown] = useState(false);
 
   return (
     <section className="text-black space-y-10">
@@ -164,12 +163,21 @@ export default function Main() {
             return (
               <div
                 key={index}
-                // onClick={}
+                onClick={() => {
+                  setFaq((prevData) => {
+                    const newData = [...prevData];
+                    newData[index] = {
+                      ...newData[index],
+                      showAnswer: !newData[index].showAnswer,
+                    };
+                    return newData;
+                  });
+                }}
                 id={item.id}
                 className="w-full p-2 py-3 cursor-pointer border-b space-y-3"
               >
                 <button className=" flex w-full text-veryDarkBlue items-center justify-between">
-                  <h4 className="text-veryDarkBlue text-xl">{item.question}</h4>
+                  <h4 className="text-veryDarkBlue text-md sm:text-2xl">{item.question}</h4>
                   {item.showAnswer ? (
                     <IoMdArrowDropup className="text-2xl" />
                   ) : (
@@ -183,14 +191,13 @@ export default function Main() {
             );
           })}
         </div>
+
         <button className="border  hover:bg-softBlue self-center hover:text-white capitalize border-softBlue p-2 px-3 rounded-md">
           more info
         </button>
       </div>
 
-      <div className="bg-softBlue flex flex-col">
-
-      </div>
+      <div className="bg-softBlue flex flex-col"></div>
     </section>
   );
 }
