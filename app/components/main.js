@@ -177,7 +177,9 @@ export default function Main() {
                 className="w-full p-2 py-3 cursor-pointer border-b space-y-3"
               >
                 <button className=" flex w-full text-veryDarkBlue items-center justify-between">
-                  <h4 className="text-veryDarkBlue text-md sm:text-2xl">{item.question}</h4>
+                  <h4 className="text-veryDarkBlue text-md sm:text-2xl">
+                    {item.question}
+                  </h4>
                   {item.showAnswer ? (
                     <IoMdArrowDropup className="text-2xl" />
                   ) : (
@@ -197,7 +199,17 @@ export default function Main() {
         </button>
       </div>
 
-      <div className="bg-softBlue flex flex-col"></div>
+      <div className="bg-softBlue flex flex-col p-8">
+        <p className="uppercase">35,000+ already joined</p>
+        <h2>Stay up-to-date with what we're doing</h2>
+
+        <div className="flex flex-col">
+          <input type="email" className="" />
+          <p>Whoops, make sure it's an email</p>
+        </div>
+
+        <button className="">contact us</button>
+      </div>
     </section>
   );
 }
