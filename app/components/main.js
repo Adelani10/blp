@@ -173,7 +173,6 @@ export default function Main() {
                     return newData;
                   });
                 }}
-                id={item.id}
                 className="w-full p-2 py-3 cursor-pointer border-b space-y-3"
               >
                 <button className=" flex w-full text-veryDarkBlue items-center justify-between">
