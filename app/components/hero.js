@@ -12,7 +12,7 @@ export default function Hero() {
   ]);
 
   return (
-    <div className="flex flex-col space-y-8 sm:space-y-12">
+    <div className="flex flex-col space-y-8 sm:space-y-12 p-6">
       <nav className="flex justify-between items-center">
         <img src="/logo-bookmark.svg" alt="" className="" />
         <div className=" sm:space-x-3 md:space-x-8 hidden sm:inline-block ">

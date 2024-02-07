@@ -59,7 +59,7 @@ export default function Main() {
 
   return (
     <section className="text-black space-y-10">
-      <div className="space-y-2">
+      <div className="space-y-2 px-6">
         <h3 className="capitalize text-2xl font-semibold text-center text-veryDarkBlue">
           features
         </h3>
@@ -82,7 +82,7 @@ export default function Main() {
         </div>
       </div>
 
-      <div className="flex sm:space-x-6 sm:justify-between space-y-4 sm:space-y-0 flex-col sm:flex-row items-center ">
+      <div className="flex px-6 sm:space-x-6 sm:justify-between space-y-4 sm:space-y-0 flex-col sm:flex-row items-center ">
         <div className="p-4 border">
           <img src="/illustration-features-tab-1.svg" className=" " alt="" />
         </div>
@@ -103,7 +103,7 @@ export default function Main() {
         </article>
       </div>
 
-      <div className="space-y-2">
+      <div className="space-y-2 px-6">
         <h3 className=" text-2xl text-veryDarkBlue font-semibold text-center">
           Download the extention
         </h3>
@@ -149,7 +149,7 @@ export default function Main() {
         </div>
       </div>
 
-      <div className="space-y-2 sm:max-w-[60%] w-full mx-auto flex flex-col">
+      <div className="space-y-2 px-6 sm:max-w-[60%] w-full mx-auto flex flex-col">
         <h3 className=" text-2xl text-veryDarkBlue font-semibold text-center">
           Frequently asked questions
         </h3>
@@ -198,7 +198,7 @@ export default function Main() {
         </button>
       </div>
 
-      <div className="bg-softBlue flex flex-col p-8">
+      <div className="bg-softBlue space-y-4 flex flex-col p-8">
         <p className="uppercase">35,000+ already joined</p>
         <h2>Stay up-to-date with what we're doing</h2>
 
