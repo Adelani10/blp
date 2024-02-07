@@ -198,12 +198,12 @@ export default function Main() {
         </button>
       </div>
 
-      <div className="bg-softBlue space-y-4 flex flex-col p-8">
+      <div className="bg-softBlue space-y-4 flex flex-col text-white p-8">
         <p className="uppercase">35,000+ already joined</p>
         <h2>Stay up-to-date with what we're doing</h2>
 
         <div className="flex flex-col">
-          <input type="email" className="" />
+          <input type="email" className="rounded-md h-10 border" />
           <p>Whoops, make sure it's an email</p>
         </div>
 
