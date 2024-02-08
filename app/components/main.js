@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+import { FaSquareFacebook, FaSquareTwitter } from "react-icons/fa6";
 
 export default function Main() {
   const [browser, setBrowser] = useState([
@@ -198,16 +200,57 @@ export default function Main() {
         </button>
       </div>
 
-      <div className="bg-softBlue space-y-4 text-center flex flex-col text-white p-8">
-        <p className="uppercase tracking-widest">35,000+ already joined</p>
-        <h2 className="text-2xl tracking-wider font-semibold">Stay up-to-date with what we're doing</h2>
+      <div>
+        <div className="bg-softBlue space-y-4 text-center flex flex-col text-white p-8">
+          <p className="uppercase tracking-widest">35,000+ already joined</p>
+          <h2 className="text-2xl tracking-wider font-semibold">
+            Stay up-to-date with what we're doing
+          </h2>
 
-        <div className="flex flex-col">
-          <input type="email" className="rounded-t-md border-t-2 h-10" />
-          <p className="text-left p-1 text-sm rounded-b-md bg-softRed">Whoops, make sure it's an email</p>
+          <div className="flex flex-col">
+            <input type="email" className="rounded-t-md border-t-2 h-10" />
+            <p className="text-left p-1 text-sm rounded-b-md bg-softRed">
+              Whoops, make sure it's an email
+            </p>
+          </div>
+
+          <button className="w-full p-3 capitalize bg-softRed rounded-md">
+            contact us
+          </button>
         </div>
 
-        <button className="w-full p-3 capitalize bg-softRed rounded-md">contact us</button>
+        <div className="flex flex-col items-center p-12 bg-veryDarkBlue gap-y-8 text-white">
+          <img
+            src="/logo-bookmark.svg"
+            alt=""
+            className="text-white bg-white w-1/2"
+          />
+          <button>
+            <Link href="" className="uppercase">
+              features
+            </Link>
+          </button>
+          <button>
+            <Link href="" className="uppercase">
+              pricing
+            </Link>
+          </button>
+          <button>
+            <Link href="" className="uppercase">
+              contact
+            </Link>
+          </button>
+
+          <div className="flex gap-x-12 text-2xl uppercase">
+            <Link href="/" className="">
+              <FaSquareFacebook />
+            </Link>
+
+            <Link href="/" className="">
+              <FaSquareTwitter />
+            </Link>
+          </div>
+        </div>
       </div>
     </section>
   );
