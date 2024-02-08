@@ -198,16 +198,16 @@ export default function Main() {
         </button>
       </div>
 
-      <div className="bg-softBlue space-y-4 flex flex-col text-white p-8">
-        <p className="uppercase">35,000+ already joined</p>
-        <h2>Stay up-to-date with what we're doing</h2>
+      <div className="bg-softBlue space-y-4 text-center flex flex-col text-white p-8">
+        <p className="uppercase tracking-widest">35,000+ already joined</p>
+        <h2 className="text-2xl tracking-wider font-semibold">Stay up-to-date with what we're doing</h2>
 
         <div className="flex flex-col">
-          <input type="email" className="rounded-md h-10 border" />
-          <p>Whoops, make sure it's an email</p>
+          <input type="email" className="rounded-t-md border-t-2 h-10" />
+          <p className="text-left p-1 text-sm rounded-b-md bg-softRed">Whoops, make sure it's an email</p>
         </div>
 
-        <button className="">contact us</button>
+        <button className="w-full p-3 capitalize bg-softRed rounded-md">contact us</button>
       </div>
     </section>
   );
