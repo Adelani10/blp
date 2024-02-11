@@ -13,7 +13,7 @@ export default function Hero() {
     { name: "login", href: "/", styled: true },
   ]);
 
-  const {sideBar} = useContext(appContext)
+  const {sideBar, sideBarOn} = useContext(appContext)
 
   return (
     <div className="flex flex-col space-y-8 sm:space-y-12 p-6">
@@ -36,7 +36,7 @@ export default function Hero() {
           })}
         </div>
 
-        <button className="text-softBlue text-4xl sm:hidden">
+        <button onClick={sideBarOn} className="text-softBlue text-4xl sm:hidden">
           <IoMenu />
         </button>
       </nav>

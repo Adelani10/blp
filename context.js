@@ -10,11 +10,16 @@ function Context({ children }) {
     const sideBarOn = () => {
         setSideBar(true)
     }
+
+    const sideBarOff = () => {
+        setSideBar(false)
+    }
     return (
         <appContext.Provider
             value={{
                 sideBar,
                 sideBarOn,
+                sideBarOff
             }}
         >
             {children}

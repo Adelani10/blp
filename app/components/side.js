@@ -3,19 +3,17 @@ import Link from "next/link";
 import { useContext, useState } from "react";
 import { FaSquareFacebook, FaSquareTwitter } from "react-icons/fa6";
 import { appContext } from "@/context";
-import { Context } from "@/context";
 
 import { IoCloseSharp } from "react-icons/io5";
 
 export default function Side() {
-    const {sideBar} = useContext(appContext)
+  const { sideBar, sideBarOff } = useContext(appContext);
 
   return (
     <div className="absolute sm:hidden flex flex-col top-0 left-0 bottom-0 bg-veryDarkBlue w-full opacity-95 p-8 scroll space-y-8 max-h-screen">
-
       <div className="flex items-center justify-between">
         <img src="/logo-bookmark.svg" alt="" className="" />
-        <button className="text-4xl font-bold">
+        <button onClick={sideBarOff} className="text-4xl font-bold">
           <IoCloseSharp />
         </button>
       </div>
