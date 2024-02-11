@@ -1,7 +1,9 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { IoMenu } from "react-icons/io5";
+import { appContext } from "@/context";
+import { Context } from "@/context";
 
 export default function Hero() {
   const [navs, setNavs] = useState([
@@ -10,6 +12,8 @@ export default function Hero() {
     { name: "contact", href: "/", styled: false },
     { name: "login", href: "/", styled: true },
   ]);
+
+  const {sideBar} = useContext(appContext)
 
   return (
     <div className="flex flex-col space-y-8 sm:space-y-12 p-6">
