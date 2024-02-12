@@ -5,6 +5,8 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { FaSquareFacebook, FaSquareTwitter } from "react-icons/fa6";
 
 export default function Main() {
+  const [input, setInput] = useState("");
+  const [isTextCorrect, setIsTextCorrect] = useState(false);
   const [browser, setBrowser] = useState([
     {
       img: "/logo-chrome.svg",
@@ -208,10 +210,23 @@ export default function Main() {
           </h2>
 
           <div className="flex flex-col">
-            <input type="email" className="rounded-t-md border-t-2 h-10" />
-            <p className="text-left p-1 text-sm rounded-b-md bg-softRed">
-              Whoops, make sure it's an email
-            </p>
+            <input
+              type="email"
+              onChange={(event) => {
+                setInput(event.target.value);
+                if (event.target.value.includes("@gmail.com")) {
+                  setIsTextCorrect(true);
+                } else {
+                  setIsTextCorrect(false);
+                }
+              }}
+              className="rounded-t-md px-3 text-veryDarkBlue border-t-2 h-10"
+            />
+            {!isTextCorrect && (
+              <p className="text-left p-1 text-sm rounded-b-md bg-softRed">
+                Whoops, make sure it's an email
+              </p>
+            )}
           </div>
 
           <button className="w-full p-3 capitalize bg-softRed rounded-md">

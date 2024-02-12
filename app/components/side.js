@@ -12,7 +12,7 @@ export default function Side() {
   return (
     <div className="absolute sm:hidden flex flex-col top-0 left-0 bottom-0 bg-veryDarkBlue w-full opacity-95 p-8 scroll space-y-8 max-h-screen">
       <div className="flex items-center justify-between">
-        <img src="/logo-bookmark.svg" alt="" className="" />
+        <img src="/logo-bookmark.svg" alt="" className="bg-white" />
         <button onClick={sideBarOff} className="text-4xl font-bold">
           <IoCloseSharp />
         </button>
